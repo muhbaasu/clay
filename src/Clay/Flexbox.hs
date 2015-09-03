@@ -51,8 +51,8 @@ alignSelf = key "align-self"
 
 -------------------------------------------------------------------------------
 
-flex :: Int -> Int -> Size b -> Css
-flex g s b = key "flex" (gs ! ss ! value b)
+flex_ :: Int -> Int -> Size b -> Css
+flex_ g s b = key "flex" (gs ! ss ! value b)
   where gs = fromString (show g) :: Value
         ss = fromString (show s) :: Value
 
