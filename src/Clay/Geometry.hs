@@ -14,6 +14,7 @@ module Clay.Geometry
 -- * Margin.
 , margin
 , marginTop, marginLeft, marginRight, marginBottom
+, marginAll, marginBoth
 )
 where
 
@@ -64,3 +65,8 @@ marginLeft    = key "margin-left"
 marginRight   = key "margin-right"
 marginBottom  = key "margin-bottom"
 
+marginAll :: Size a -> Css
+marginAll = key "margin"
+
+marginBoth :: Size a -> Size b -> Css
+marginBoth a b= key "margin" (a ! b)
